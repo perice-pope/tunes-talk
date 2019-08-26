@@ -4,9 +4,15 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('../server');
 var debug = require('debug')('tunes-talk:server');
 var http = require('http');
+
+// load the env vars
+require('dotenv').config(); 
+
+//express app 
+// var app = express(); 
 
 /**
  * Get port from environment and store in Express.

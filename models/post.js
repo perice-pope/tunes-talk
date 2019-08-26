@@ -1,17 +1,19 @@
 var commentSchema = new mongoose.Schema({
-    user: { type:  mongoose.Schema.Types.ObjectId, ref: 'User'},
-        commenterName: String,
-        text: String,
-        timestamps: true    
-      });
-  
-  var postSchema = new mongoose.Schema({
-    song: { title: String,
-            artist: String, 
-      },
-      comments: [commentSchema]
-  }, {
-    timestamps: true
-  });
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+    commenterName: String,
+    text: String,
+},
+    {timestamps: true
+});
 
-  module.exports = mongoose.model('Post', postSchema);
+var postSchema = new mongoose.Schema({
+    song: {
+        title: String,
+        artist: String,
+    },
+    comments: [commentSchema]
+}, {
+        timestamps: true
+    });
+
+module.exports = mongoose.model('Post', postSchema);

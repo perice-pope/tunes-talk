@@ -1,10 +1,13 @@
+var mongoose = require('mongoose');
+
 var commentSchema = new mongoose.Schema({
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     commenterName: String,
     text: String,
 },
-    {timestamps: true
-});
+    {
+        timestamps: true
+    });
 
 var postSchema = new mongoose.Schema({
     song: {

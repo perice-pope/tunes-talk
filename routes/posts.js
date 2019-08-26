@@ -6,7 +6,6 @@ router.get('/', postCtrl.index);
 
 
 // router.post('/index', studentsCtrl.addFact);
-
 // DELETE /facts/:id
 // router.delete('/index/:id', studentsCtrl.delFact);
 

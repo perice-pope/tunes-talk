@@ -18,7 +18,7 @@ router.get('/oauth2callback', passport.authenticate(
   {
     successRedirect: '/index', 
     failureRedirect: '/index' 
-    // but could redirect to anywhere 
+    // but could redirect to anywhere.
   }
 ));
 

@@ -6,14 +6,18 @@ module.exports = {
   // delFact
 };
 
-function index(req, res, next) {
+function index(req, res) {
   console.log(req.query)
   // find all posts from my database use .sort 
   Post.find({}, function (err, posts) {
-    res.render('/index',
+    res.render('index',
       { // show all previous posts from the model
-        song,
-        comments
+        posts,
+        user: req.user,
+        name: req.query.name,
+        
+        // song,
+        // comments
       });
   });
 }

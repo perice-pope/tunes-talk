@@ -5,7 +5,8 @@ var userSchema = new mongoose.Schema({
   email: String,
   avatar: String,
   googleId: String, 
-  posts: [postSchema]
+  posts: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Post' },
+]
 }, {
   timestamps: true
 });

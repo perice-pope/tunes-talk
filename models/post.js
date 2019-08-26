@@ -10,6 +10,7 @@ var commentSchema = new mongoose.Schema({
     });
 
 var postSchema = new mongoose.Schema({
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     song: {
         title: String,
         artist: String,

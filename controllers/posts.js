@@ -12,7 +12,9 @@ function addComment(req,res){
 
   Post.findById(req.params.id, function(e, post){
     req.body.user = req.user
-    req.body.commenterName = req.user.name
+    if(req.user.name){
+      req.body.commenterName = req.user.name
+    }
     post.comments.push(req.body)
     post.save(function(err){
       if(err) res.redirect('back')
@@ -24,14 +26,15 @@ function addComment(req,res){
 function show(req, res){
   Post.findById(req.params.id, function(e, post){
     res.render('posts/show', {
-      post
+      post, 
+      user: req.user,
+      name: req.query.name
     })
   })
 }
 
 function index(req, res) {
-  console.log(req.query)
-  // find all posts from my database use .sort 
+  console.log(req.query) 
   Post.find({}, function (err, posts) {
     res.render('index',
       { 

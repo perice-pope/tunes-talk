@@ -11,21 +11,43 @@
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body>
+    <div class="container"> 
+            <div>
+                    <nav>
+                      <div>
+                        <ul>
+                          <li>
+                            <% if (user) { %>
+                            <a href="/logout"><i class="material-icons left"> </i>Log Out</a>
+                            <% } else { %>
+                            <a href="/auth/google"><i class="material-icons left"> </i>Google Login</a>
+                            <% } %>
+                          </li>
+                        </ul>
+                      </div>
+                    </nav>
+                  </div>  
+
+
     <h1>Post Info</h1>
     <%= post.title %>
     <%= post.artist %>
     <%= post.description %>
     <h4>Comments</h4>
-    <% post.comments.forEach(c =>{ %>
+    <% post.comments.forEach(function(c) { %>
         <ul>
             <li><%= c.text %></li>
             <li><%= c.commenterName %></li>
         </ul>
     <% }) %>
 
+    
     <form action="/posts/<%= post._id %>/comments" method="POST">
         <input type="text" name="text">
         <input type="submit" value="Submit">
     </form>
+    
+
+</div>
 </body>
 </html>

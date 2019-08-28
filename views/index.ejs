@@ -12,14 +12,12 @@
   <!-- JavaScript for Materialize -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
-
 <body>
-  <div class="navbar-fixed">
+  <div class="container">
+  <div>
     <nav>
-      <div class="nav-wrapper">
-        <!-- <a href="" class="brand-logo left">Tunes-Talk!!!</a> -->
-        <!-- new html below -->
-        <ul class="right">
+      <div>
+        <ul>
           <li>
             <% if (user) { %>
             <a href="/logout"><i class="material-icons left"> </i>Log Out</a>
@@ -32,32 +30,38 @@
     </nav>
   </div>
   <!-- link post -->
-  <div class="music-post">
+  <div class="center-align">
     <form action="/posts" method="POST">
+      <div class="input-field">
       <input type="text" name="title">
+      <label for="title">Title</label>
+    </div>
+    <div class="input-field">
       <input type="text" name="artist">
+      <label for="artist">Artist</label>
+    </div>
+    <div class="input-field">
+      <input type="text" name="description">
+      <label for="coment">Description</label>
+    </div>
       <button type="submit">submit post</button>
     </form>
     <% if(posts){ %>
     <!-- //loop to the post to render all comments -->
     <% posts.forEach(function(p) { %>
     <ul>
-      <li><%= p.title %></li>
+      <li><%= p.title %></li> 
       <li><%= p.artist %></li>
-      <li><a href="/posts/<%= p._id %>">DETAILS</a></li>
+      <li><%= p.description %></li>
+      <li ><a href="/posts/<%= p._id %>">See More About This Post</a></li>
     </ul>
     <% }); %>
     <% } else { %>
-    <h1>there are no posts to show</h1>
+    <h1 class="center-align">there are no posts to show</h1>
     <% } %>
   </div>
-  <!--comment form -->
-  <div class="comment-form">
-    <form action="/posts" method="POST">
-      <input type="text" name="text">
-      <button type="submit">submit post</button>
-    </form>
-  </div>
+
+</div>
 </body>
 
 </html>

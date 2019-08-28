@@ -13,7 +13,9 @@ var postSchema = new mongoose.Schema({
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     title: String,
     artist: String,
+    description: String,
     comments: [commentSchema]
+
 }, {
         timestamps: true
     });

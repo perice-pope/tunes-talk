@@ -1,40 +1,18 @@
 body {
-  padding: 50px;
   font: 24px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 nav {
-  margin-left: 15px; 
+  margin-left: 0px; 
   background: cornflowerblue; 
 }
 a {
-  color: #00B7FF;
-  /* float: left; */
-  justify-content: center;  
+  color: rgb(13, 110, 148);
+  font-size: 28px;  
 }
 
 h1 {
   margin-left: 200px; 
-}
-
-.comment-form {
-  padding-top: 20px;
-  height: 100px; 
-  width: 610px; 
-  /* border: solid;  */
-}
-
-input, form {
-  font-family: inherit;
-  font-size: 12px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  height: 200px; 
-  width: 610px; 
-  margin-bottom: 15px; 
-  margin-top: 25px; 
-
 }
 
 button {
@@ -49,3 +27,5 @@ button {
   text-shadow: 0 1px rgba(255, 255, 255, 0.3);
   background: #adcbfa;
 }
+
+

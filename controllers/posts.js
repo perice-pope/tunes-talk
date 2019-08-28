@@ -3,9 +3,23 @@ const Post = require('../models/post');
 module.exports = {
   index,
   create,
-  show
+  show,
+  addComment
   // delFact
 };
+
+function addComment(req,res){
+
+  Post.findById(req.params.id, function(e, post){
+    req.body.user = req.user
+    req.body.commenterName = req.user.name
+    post.comments.push(req.body)
+    post.save(function(err){
+      if(err) res.redirect('back')
+      res.redirect('/posts')
+    })
+  })
+}
 
 function show(req, res){
   Post.findById(req.params.id, function(e, post){
@@ -37,7 +51,5 @@ function create(req, res, next) {
     Post.create(req.body)
     res.redirect('/posts')
   }
-
-// function delFact(req, res, next) {
-
-// }
+ 
+// delete 

@@ -35,4 +35,11 @@ button {
   background: #ffffff;
 }
 
+.input-field>label {
+  color: #ffffff; 
+  position: absolute; 
+  font-size: 1.5rem;
+  margin-left: 30px; 
+}
+
 

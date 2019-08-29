@@ -5,7 +5,6 @@ module.exports = {
   create,
   show,
   addComment
-  // delFact
 };
 
 function addComment(req,res){
@@ -38,7 +37,7 @@ function index(req, res) {
   Post.find({}, function (err, posts) {
     res.render('index',
       { 
-        // show all previous posts from the model
+ 
         posts,
         user: req.user,
         name: req.query.name,
@@ -47,12 +46,9 @@ function index(req, res) {
   });
 }
 
-// create post... using .save ect.  
+ 
 function create(req, res, next) {
 
-  // res.send('hello')
     Post.create(req.body)
     res.redirect('/posts')
   }
- 
-// delete 

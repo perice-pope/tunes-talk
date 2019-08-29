@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Livvic&display=swap');
+
+* {
+    font-family: 'Livvic', sans-serif;
+}
+
+div h1 {
+    font-size: 82px; 
+    margin-top: 0px; 
+}
+
+div h4 {
+    margin-top: 70px; 
+    margin-bottom: 0px; 
+}
+
+.space { 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+.prev-post {
+    font-size: 25px; 
+}
+
+    .submit {
+
+        background: rgba(34, 27, 51, 0.466);
+        
+        color: rgb(23, 37, 82);
+        
+        border: 1px solid #eee;
+        
+        border-radius: 20px;
+        
+        box-shadow: 5px 5px 5px #eee;
+        
+        text-shadow:none;
+        
+        }

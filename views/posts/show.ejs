@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel='stylesheet' href='/stylesheets/style2.css' />
         <!-- Google Icon Fonts used by Materialize -->
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Materialize CSS Framework -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <link rel="stylesheet" href="stylesheets/style.css" />
+        <link rel="stylesheet" href="stylesheets/style2.css" />
         <!-- JavaScript for Materialize -->
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
@@ -28,26 +28,29 @@
                     </nav>
                   </div>  
 
-
+<div class="center-align">
     <h1>Post Info</h1>
+    <div class="prev-post">
     <%= post.title %>
     <%= post.artist %>
     <%= post.description %>
+</div>
     <h4>Comments</h4>
+    <div>
     <% post.comments.forEach(function(c) { %>
-        <ul>
+        <ul class="card-panel hoverable" class="space">
             <li><%= c.text %></li>
             <li><%= c.commenterName %></li>
         </ul>
     <% }) %>
-
+</div>
+</div>
     
     <form action="/posts/<%= post._id %>/comments" method="POST">
         <input type="text" name="text">
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" class="submit">
     </form>
     
-
 </div>
 </body>
 </html>

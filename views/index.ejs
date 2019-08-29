@@ -18,12 +18,12 @@
     <nav>
       <div>
         <ul>
-          <li>McTunes</li>
+          <li class="moveit">McTunes</li>
           <li>
             <% if (user) { %>
-            <a href="/logout"><i class="material-icons left"> </i>Log Out</a>
+            <a href="/logout"><i class="material-icons right"> </i>Log Out</a>
             <% } else { %>
-            <a href="/auth/google"><i class="material-icons left"> </i>Google Login</a>
+            <a href="/auth/google"><i class="material-icons right"> </i>Google Login</a>
             <% } %>
           </li>
         </ul>
@@ -34,19 +34,19 @@
   <div class="center-align">
     <form action="/posts" method="POST">
       <div class="input-field">
-      <input type="text" name="title">
+      <input style="color:white" type="text" name="title">
       <label for="title">Title</label>
     </div>
     <div class="input-field">
-      <input type="text" name="artist">
+      <input style="color:white" type="text" name="artist">
       <label for="artist">Artist</label>
     </div>
     <div class="input-field">
-      <input type="text" name="description">
+      <input style="color:white" type="text" name="description">
       <label for="coment">Description</label>
     </div>
     <div class="input-field" class="url">
-        <input type="url" name="link">
+        <input style="color:white" type="url" name="link">
         <label for="link">Music URL</label>
       </div>
       <button type="submit">submit post</button>
@@ -58,7 +58,7 @@
       <li><%= p.title %></li> 
       <li><%= p.artist %></li>
       <li><%= p.description %></li>
-      <li ><a href="/posts/<%= p._id %>">See More About This Post</a></li>
+      <li><a href="/posts/<%= p._id %>">See More...</a></li>
     </ul>
 
   <form class="kill-post" action="/posts/<%= p._id %>?_method=DELETE" method="POST">

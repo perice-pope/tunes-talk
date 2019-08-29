@@ -18,7 +18,7 @@
                         <ul>
                           <li>
                             <% if (user) { %>
-                            <a href="/logout"><i class="material-icons left"> </i>Log Out</a>
+                            <a href="/logout"><i class="material-icons right"> </i>Log Out</a>
                             <% } else { %>
                             <a href="/auth/google"><i class="material-icons left"> </i>Google Login</a>
                             <% } %>
@@ -34,7 +34,7 @@
     <%= post.title %>
     <%= post.artist %>
     <%= post.description %>
-    <a href="<%= post.link %>"><%= post.title %> youtube video</a>
+    <a href="<%= post.link %>"><%= post.title %>Music Video</a>
 </div>
     <h4 class="card-panel hoverable">Comments</h4>
     <div class="card-panel hoverable">

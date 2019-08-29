@@ -29,21 +29,15 @@ div h4 {
     font-size: 25px; 
 }
 
-    .submit {
-
-        background: rgba(34, 27, 51, 0.466);
-        
-        color: rgb(23, 37, 82);
-        
-        border: 1px solid #eee;
-        
-        border-radius: 20px;
-        
-        box-shadow: 5px 5px 5px #eee;
-        
-        text-shadow:none;
-        }
-
-        li {
-            color: rgb(0, 0, 0); 
-        }
+.submit {
+    background: rgba(34, 27, 51, 0.466);   
+    color: rgb(23, 37, 82);    
+    border: 1px solid #eee;    
+    border-radius: 20px;   
+    box-shadow: 5px 5px 5px #eee;   
+    text-shadow:none;
+    }
+    
+li {
+    color: rgb(0, 0, 0); 
+    }

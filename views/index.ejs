@@ -60,6 +60,11 @@
       <li><%= p.description %></li>
       <li ><a href="/posts/<%= p._id %>">See More About This Post</a></li>
     </ul>
+
+  <form class="kill-post" action="/posts/<%= p._id %>?_method=DELETE" method="POST">
+    <input type="submit" value="delete"></input>
+  </form>
+
     <% }); %>
     <% } else { %>
     <h1 class="center-align">there are no posts to show</h1>

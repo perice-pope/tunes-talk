@@ -44,6 +44,6 @@ div h4 {
         text-shadow:none;
         }
 
-        li ul {
-            color: white; 
+        li {
+            color: rgb(0, 0, 0); 
         }

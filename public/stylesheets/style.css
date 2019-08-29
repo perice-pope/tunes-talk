@@ -4,16 +4,17 @@
 }
 
 body {
-  font-size: 24px 
+  font-size: 24px; 
+  background-image: url("https://i.imgur.com/2zS30bim.jpg");
   
 }
 
 nav {
   margin-left: 0px; 
-  background: cornflowerblue; 
+  background: rgb(119, 31, 31); 
 }
 a {
-  color: rgb(13, 110, 148);
+  color: rgb(231, 18, 18);
   font-size: 28px;  
 }
 
@@ -28,10 +29,10 @@ button {
   margin-bottom: 15px;
   font-size: 14px;
   font-weight: bold;
-  color: #294779;
+  color: #ffffff;
   text-align: center;
   text-shadow: 0 1px rgba(255, 255, 255, 0.3);
-  background: #adcbfa;
+  background: #ffffff;
 }
 
 

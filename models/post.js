@@ -14,8 +14,8 @@ var postSchema = new mongoose.Schema({
     title: String,
     artist: String,
     description: String,
-    comments: [commentSchema]
-
+    comments: [commentSchema],
+    link: String
 }, {
         timestamps: true
     });

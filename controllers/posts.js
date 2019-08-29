@@ -46,7 +46,6 @@ function index(req, res) {
   });
 }
 
- 
 function create(req, res, next) {
 
     Post.create(req.body)

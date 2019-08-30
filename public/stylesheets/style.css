@@ -30,10 +30,10 @@ button {
   margin-bottom: 15px;
   font-size: 14px;
   font-weight: bold;
-  color: #ffffff;
+  /* color: #000000; */
   text-align: center;
   text-shadow: 0 1px rgba(255, 255, 255, 0.3);
-  background: #ffffff;
+  /* background: #ffffff; */
 }
 
 .input-field>label {

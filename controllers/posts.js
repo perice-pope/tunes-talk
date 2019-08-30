@@ -50,6 +50,7 @@ function create(req, res, next) {
 
   Post.create(req.body)
   res.redirect('/posts')
+  console.log(req.user);
 }
 
 function deletefunk(req, res, next) {

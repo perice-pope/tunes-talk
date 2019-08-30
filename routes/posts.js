@@ -16,6 +16,4 @@ function isLoggedIn(req, res, next) {
 // posting comment...
 router.post('/', postCtrl.create);
 
-
-
 module.exports = router;

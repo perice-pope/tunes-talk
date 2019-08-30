@@ -2,8 +2,8 @@ var router = require('express').Router();
 var postCtrl = require('../controllers/posts');
 
 // GET /posts
-router.get('/', isLoggedIn, postCtrl.index);
-router.get('/:id', postCtrl.show);
+router.get('/', postCtrl.index);
+router.get('/:id', isLoggedIn, postCtrl.show);
 router.post('/:id/comments', isLoggedIn, postCtrl.addComment);
 router.delete('/:id', isLoggedIn, postCtrl.deletefunk); 
 
